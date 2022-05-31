@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <link href="https://fonts.googleapis.com/css?family=lato:300,400,700" rel="stylesheet">
-    <link href="style.css" rel="stylesheet" media="screen" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
 
   <body class="page-body">
-    <div class="eisenhower-matrix container">
+    <article class="eisenhower-matrix container">
       <img class="eisenhower-matrix__img" src="./eisenhower-matrix.jpg">
       <a class="eisenhower-matrix__info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-    </div>
+    </article>
 
-    <div class="scheduler container">
-      <p id="topsectionforaddingelementtolist">
-        <h3 class="scheduler__block-heading block-heading"><label for="new-task">Add Item</label></h3>
-        <div class="scheduler__task">
-          <input class="scheduler__input" id="new-task" type="text">
-          <button class="btn">Add</button>
-        </div>
-      </p>
+    <section class="scheduler container">
+      <h3 class="scheduler__block-heading block-heading"><label for="new-task">Add Item</label></h3>
+      <div class="page-body__scheduler-task scheduler__task">
+        <input class="scheduler__input" id="new-task" type="text">
+        <button class="btn">Add</button>
+      </div>
 
       <h3 class="block-heading">Todo</h3>
       <ul class="scheduler__task-list" id="incomplete-tasks">
@@ -50,7 +51,7 @@
           <button class="btn btn--delete"><img class="btn__delete" src="./remove.svg"></button>
         </li>
       </ul>
-    </div>
+    </section>
 
     <script src="app.js"></script>
   </body>
