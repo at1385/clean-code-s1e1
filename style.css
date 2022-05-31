@@ -100,7 +100,7 @@
 .scheduler__input {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .scheduler__task-name {
@@ -129,13 +129,13 @@
 
 /* Completed */
 .scheduler__task--done .scheduler__task-name {
-  text-decoration: line-through
+  text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 .scheduler__task-list .scheduler__input {
-  display: none
+  display: none;
 }
 
 .scheduler__task--edit-mode .scheduler__input {
