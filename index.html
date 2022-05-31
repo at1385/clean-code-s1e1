@@ -6,7 +6,7 @@
     <link href="style.css" rel="stylesheet" media="screen" charset="utf-8">
   </head>
 
-  <body>
+  <body class="page-body">
     <div class="eisenhower-matrix container">
       <img class="eisenhower-matrix__img" src="./eisenhower-matrix.jpg">
       <a class="eisenhower-matrix__info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
@@ -14,7 +14,7 @@
 
     <div class="scheduler container">
       <p id="topsectionforaddingelementtolist">
-        <label class="block-heading" for="new-task">Add Item</label>
+        <h3 class="scheduler__block-heading block-heading"><label for="new-task">Add Item</label></h3>
         <div class="scheduler__task">
           <input class="scheduler__input" id="new-task" type="text">
           <button class="btn">Add</button>
@@ -44,7 +44,7 @@
       <ul class="scheduler__task-list" id="completed-tasks">
         <li class="scheduler__task scheduler__task--list-item">
           <input class="scheduler__checkbox" type="checkbox" checked>
-          <label class="scheduler__task-name scheduler__task-name--done">See The Doctor</label>
+          <label class="scheduler__task-name">See The Doctor</label>
           <input class="scheduler__input" type="text">
           <button class="btn btn--edit">Edit</button>
           <button class="btn btn--delete"><img class="btn__delete" src="./remove.svg"></button>
