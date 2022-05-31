@@ -30,7 +30,7 @@
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
-  outline:none;
+  outline: none;
 }
 
 .btn:hover {
@@ -75,7 +75,7 @@
 .scheduler__task-list {
   margin: 0;
   padding: 0px;
-  list-style:none;
+  list-style: none;
 }
 
 .scheduler__task {
@@ -120,7 +120,7 @@
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
-  outline:none;
+  outline: none;
 }
 
 .scheduler__input:focus {
@@ -135,13 +135,13 @@
 
 /* Edit Task */
 .scheduler__task-list .scheduler__input {
-  display:none
+  display: none
 }
 
 .scheduler__task--edit-mode .scheduler__input {
-  display:inline-block;
+  display: inline-block;
 }
 
 .scheduler__task--edit-mode .scheduler__task-name {
-  display:none;
+  display: none;
 }
