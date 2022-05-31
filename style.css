@@ -1,14 +1,17 @@
-/* Basic Style */
+/* Basic styles */
 .page-body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
+
 .container {
   display: block;
   width: 500px;
   margin: 0 auto;
 }
+
+/* Components */
 .block-heading {
   color: #333;
   font-weight: 700;
@@ -18,42 +21,7 @@
   margin: 0;
   text-transform: uppercase;
 }
-.eisenhower-matrix {
-  text-align: right;
-}
-.eisenhower-matrix__img {
-  width: 100%;
-}
-.eisenhower-matrix__info {
-  font-family: fantasy, cursive;
-}
 
-@media (max-width:768px) {
-  .eisenhower-matrix {
-    text-align: center;
-  }
-}
-
-.scheduler__block-heading {
-  margin-bottom: 20px;
-}
-
-.scheduler__task-name,
-.scheduler__input {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1
-}
-
-.scheduler__task {
-  display: flex;
-}
-
-.scheduler__task-list {
-  margin: 0;
-  padding: 0px;
-  list-style:none;
-}
 .btn {
   background: none;
   border: 0px;
@@ -64,9 +32,83 @@
   cursor: pointer;
   outline:none;
 }
+
 .btn:hover {
   color: #3a3a3a;
 }
+
+.btn__delete {
+  height: 2em;
+  transform: rotatez(45deg);
+  transition: transform 200ms ease-in;
+}
+
+.btn__delete:hover {
+  transform: rotatez(0);
+}
+
+/* Main blocks */
+.eisenhower-matrix {
+  text-align: right;
+}
+
+.eisenhower-matrix__img {
+  width: 100%;
+}
+
+.eisenhower-matrix__info {
+  font-family: fantasy, cursive;
+}
+
+@media (max-width:768px) {
+
+  .eisenhower-matrix {
+    text-align: center;
+  }
+
+}
+
+.scheduler__block-heading {
+  margin-bottom: 20px;
+}
+
+.scheduler__task-list {
+  margin: 0;
+  padding: 0px;
+  list-style:none;
+}
+
+.scheduler__task {
+  display: flex;
+}
+
+.scheduler__task--list-item {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scheduler__checkbox {
+  margin: 0 10px;
+}
+
+.scheduler__task-name,
+.scheduler__input {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1
+}
+
+.scheduler__task-name {
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
 .scheduler__input {
   margin: 0;
   font-size: 18px;
@@ -80,46 +122,13 @@
   color: #888;
   outline:none;
 }
+
 .scheduler__input:focus {
   color: #333;
 }
 
-/* Task list */
-.scheduler__task--list-item {
-  overflow: hidden;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.scheduler__task > * {
-  vertical-align: middle;
-}
-.scheduler__task > .scheduler__checkbox {
-  margin: 0 10px;
-}
-.scheduler__task > .scheduler__task-name {
-  padding-left: 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  width: 226px;
-}
-.scheduler__task > .scheduler__input {
-  width: 226px
-}
-.btn__delete {
-  height: 2em;
-  transform: rotatez(45deg);
-  transition: transform 200ms ease-in;
-}
-.btn__delete:hover {
-  transform: rotatez(0);
-}
-
 /* Completed */
-.scheduler__checkbox:checked ~ .scheduler__task-name {
+.scheduler__task--done .scheduler__task-name {
   text-decoration: line-through
   color: #888;
 }
@@ -131,7 +140,6 @@
 
 .scheduler__task--edit-mode .scheduler__input {
   display:inline-block;
-  width:224px
 }
 
 .scheduler__task--edit-mode .scheduler__task-name {
